@@ -1,42 +1,50 @@
-# Network Traffic Analyzer
+Network Traffic Analyzer
+Overview
 
-This Python script uses Scapy to capture and analyze network traffic. It can extract information from HTTP packets, including requested URLs and potential username/password information.
+This tool is a multi-platform network traffic analyzer designed to capture and analyze network packets. It supports Windows, Linux, and macOS platforms and can capture traffic from real hardware interfaces, excluding virtual interfaces.
+Author Information
 
-## Prerequisites
+    Author: **Subhankar Senapati**
+    LinkedIn: linkedin.com/in/subhankar-senapati
+    Creation Date: 2024-01-24
 
-- Python 3.x
-- Scapy library (`pip install scapy`)
+Latest Update
+Version 1.0.0
 
-## Usage
+    Added multi-platform support (Windows, Linux, macOS).
+    Improved interface filtering to exclude virtual interfaces.
+    Enhanced user experience during packet capture.
 
-1. Run the script by executing the following command:
+Usage
 
-   ```bash
-   python network_traffic_analyzer.py
-    Select a network interface from the displayed list.
-    Enter the desired output file name when prompted.
+    Run the Script:
+        Execute the script using Python.
 
-The script will capture network traffic, analyze HTTP requests, and store the captured packets in a PCAP file.
-Features
+    bash
 
-    Dynamically select a network interface.
-    Prompt user for the output file name.
-    Analyze HTTP requests and extract URLs.
-    Identify potential username/password information in HTTP packets.
-    Store captured packets in a PCAP file for further analysis.
+    python network_analyzer.py
 
-Important Notes
+    Select Interface:
+        Choose a real hardware interface from the list displayed.
 
-    Ensure you have Python 3.x installed.
-    Install the required Scapy library using pip install scapy.
-    Use this tool responsibly and comply with legal and ethical considerations.
+    Enter Output File Name:
+        Provide a name for the output file, including the .pcap extension.
 
-Disclaimer
+    Capture Traffic:
+        The tool will start capturing network traffic in a separate thread.
 
-This script is for educational purposes only. Use it responsibly and ensure compliance with applicable laws and policies.
-Author
+    Interrupt Capture:
+        Press Enter to stop capturing.
+        For a graceful exit, the tool will ask for confirmation before stopping.
 
-Subhankar Senapati
-License
+    Automatic Save:
+        If interrupted twice, the captured traffic will be automatically saved to the specified output file.
 
-This project is licensed under the MIT License - see the LICENSE.md file for details
+Notes
+
+    The tool uses the scapy library for packet capture and analysis.
+    Ensure proper permissions for network packet capture on your system.
+
+Contributions
+
+Contributions are welcome! Feel free to open issues or submit pull requests.
